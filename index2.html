@@ -11,9 +11,18 @@
 <body>
     <script>
         let day = parseInt(prompt("Nhap vao ngay sinh cua ban"));
+        // validate dữ liệu nhập vào: ngày là 1 số nguyên trong khoảng từ 1 - 31
+        while (isNaN(day) || day < 0 || day > 31) {
+            day = parseInt(prompt("Nhap vao ngay sinh cua ban"));
+        }
         let month = parseInt(prompt("Nhap vao thang sinh cua ban"));
+        // validate dữ liệu nhập vào: tháng là 1 số nguyên trong khoảng từ 1 - 12
+        while (isNaN(month) || month < 0 || month > 12) {
+            day = parseInt(prompt("Nhap vao ngay sinh cua ban"));
+        }
         let year = parseInt(prompt("Nhap vao nam sinh cua ban"));
         document.write((day < 10 ? "0" + day : day) + "-" + (month < 10 ? "0" + month : month) + "-" + year)
+        // condition expression ? true : false (1 biểu thức điều kiện dấu ? để kiểm tra nếu đúng thì nó tra về phần đằng trước dấu : còn sai thì trả về phần đằng sau dấu :)
     </script>
 </body>
 
